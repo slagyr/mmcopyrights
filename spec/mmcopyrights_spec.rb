@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'spec'
-require File.expand_path(File.dirname(__FILE__) + "/../lib/mm_copyrights")
+require File.expand_path(File.dirname(__FILE__) + "/../lib/mmcopyrights")
 require 'fileutils'
 
 TEST_DATA = File.expand_path(File.dirname(__FILE__) + "/../test_data")

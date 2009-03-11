@@ -1,3 +1,27 @@
 == MM Copyrights
 
 Add copyrights to your source files.
+
+== Install
+
+	gem sources -a http://gems.github.com
+	sudo gem install slagyr-mmcopyrights
+	
+== Example
+
+	MM::Copyrights.process("lib", "rb", "#-", "©2009 Micah Martin\nAll rights reserved")
+	
+== Usage
+
+	MM::Copyrights.process(SOURCE_DIRECTORY, FILE_EXTENSION, COMMENT_PREFIX, COPYRIGHT_TEXT)
+	
+* SOURCE_DIRECTORY - A directory where you keep source files
+* FILE_EXTENSION - To identify which files to process.  A values of "rb" will process all files ending in ".rb".
+* COMMENT_PREFIX - Be sure to use a unique comment prefix like "#-" for Ruby and "//-" for C, Java, C#, etc.  This is used to identify existing copyright headers to remove or update them.
+* COPYRIGHT_TEXT - The content of your copyright message (without comment prefix)
+
+== Description
+
+Running MM::Copyrights.process will add the COPYRIGHT_TEXT to all of the matching files in the SOURCE_DIRECTORY.  Processing the files multiple times is harmless.  
+
+You can change the COPYRIGHT_TEXT and process files again.  The old copyright headers will be replaces with the new content. 

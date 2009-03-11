@@ -8,7 +8,8 @@ Add copyrights to your source files.
 	sudo gem install slagyr-mmcopyrights
 	
 == Example
-
+	
+	require 'mmcopyrights'
 	MM::Copyrights.process("lib", "rb", "#-", "©2009 Micah Martin\nAll rights reserved")
 	
 == Usage

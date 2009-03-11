@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = "mmcopyrights"
   s.version = "1.0"
-  s.files = FileList['lib/**/*', 'spec/**/*', 'Rakefile'].to_a
+  s.files = Dir.glob('lib/**/*') + Dir.glob('spec/**/*') + ['Rakefile']
   s.require_path = 'lib'
   s.test_files = Dir.glob('spec/*_spec.rb')
   s.bindir = 'bin'

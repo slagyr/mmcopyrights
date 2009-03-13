@@ -23,8 +23,8 @@ rescue LoadError
 end
 
 task :copyrights do
-    require 'mmcopyrights'
-    copryright = "Copyright © 2009 Micah Martin.\nMM Copyrights and all included source files are distributed under terms of the GNU LGPL."
-    MM::Copyrights.process('lib', "rb", "#-", copryright)
-    MM::Copyrights.process('spec', "rb", "#-", copryright)
+  require 'mmcopyrights'
+  copyright = "Copyright © 2009 Micah Martin.\nMM Copyrights and all included source files are distributed under terms of the GNU LGPL."
+  MM::Copyrights.process('lib', "rb", "#-", copyright)
+  MM::Copyrights.process('spec', "rb", "#-", copyright)
 end

@@ -76,6 +76,8 @@ module MM
         end
       end
     end
+
+    private
     
     def self.say(thing)
       puts thing if @verbose

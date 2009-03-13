@@ -64,7 +64,7 @@ describe MM::Copyrights do
     check_file("one/one_child/oneChild.java", ["//- New copyright", "//- All rights reserved", ""])
   end
   
-  it "should not change valid copy right" do
+  it "should not change valid copyright" do
     MM::Copyrights.process(TEST_DATA, "rb", "#-", "A simple copyright\nAll rights reserved")
     MM::Copyrights.process(TEST_DATA, "rb", "#-", "A simple copyright\nAll rights reserved")
     

@@ -68,7 +68,7 @@ module MM
         source_file = SourceFile.new(filename, prefix)
         if source_file.has_copyright?
           if source_file.copyright != copyright
-            say "invalid copyright: #{filename}"
+            say "updated copyright: #{filename}"
             source_file.remove_copyright
             source_file.add_copyright(copyright)
             source_file.save!

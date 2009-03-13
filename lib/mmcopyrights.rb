@@ -55,11 +55,7 @@ module MM
       end
 
       def save!
-        File.open(@filename, "w") do |file|
-           @lines.each do |line|
-             file.write line
-           end
-        end
+        File.open(@filename, "w"){ |f| f.print @lines }
       end
     end
     

@@ -2,6 +2,11 @@
 
 Add copyrights to your source files.
 
+== Copyrights (I know this is a bit recursive)
+
+Copyright © 2009 Micah Martin.
+MM Copyrights and all included source files are distributed under terms of the GNU LGPL.
+
 == Install
 
 	gem sources -a http://gems.github.com

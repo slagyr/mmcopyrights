@@ -1,5 +1,5 @@
-#- Copyright 2008 8th Light, Inc.
-#- Limelight and all included source files are distributed under terms of the GNU LGPL.
+#- Copyright © 2009 Micah Martin.
+#- MM Copyrights and all included source files are distributed under terms of the GNU LGPL.
 
 module MM
   module Copyrights

@@ -19,7 +19,7 @@ module MM
       def initialize(filename, comment_prefix)
         @filename = filename
         @comment_prefix = comment_prefix
-        @lines = IO.readlines(filename, ENDL)
+        @lines = IO.readlines(filename)
         find_copyright
       end
 

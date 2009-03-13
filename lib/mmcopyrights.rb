@@ -30,11 +30,8 @@ module MM
       def find_copyright
         @copyright = ''
         @lines.each do |line|
-          if has_comment_prefix(line)
-            @copyright << line[@comment_prefix.length..-1]
-          else
-            break
-          end
+          break unless has_comment_prefix(line)
+          @copyright << line[@comment_prefix.length..-1]
         end
         @copyright.strip!
       end

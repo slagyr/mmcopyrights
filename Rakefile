@@ -2,7 +2,7 @@ require 'rake'
 require 'spec/rake/spectask'
 require 'rake/gempackagetask'
 
-task :default => [:spec]
+task :default => :spec
 
 desc "Run all specs"
 Spec::Rake::SpecTask.new('spec') do |t|

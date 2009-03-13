@@ -37,8 +37,7 @@ module MM
       end
 
       def has_comment_prefix(line)
-        return false if line.nil?
-        return line[0...@comment_prefix.length] == @comment_prefix
+        line.match(@comment_prefix) if line
       end
 
       def remove_copyright

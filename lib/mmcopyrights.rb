@@ -41,9 +41,7 @@ module MM
       end
 
       def remove_copyright
-        while has_comment_prefix(@lines[0])
-          @lines.shift
-        end
+        @lines.shift while has_comment_prefix(@lines[0])
       end
 
       def add_copyright(text)

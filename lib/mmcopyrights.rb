@@ -22,7 +22,7 @@ module MM
       end
 
       def has_copyright?
-        @copyright.length > 0
+        not @copyright.empty?
       end
 
       def find_copyright

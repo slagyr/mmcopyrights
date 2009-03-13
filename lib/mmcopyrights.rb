@@ -10,8 +10,6 @@ module MM
     
     self.verbose = true
 
-    ENDL = $/
-
     class SourceFile
 
       attr_reader :copyright
@@ -45,11 +43,12 @@ module MM
       end
 
       def add_copyright(text)
-        @lines.insert(0, ENDL) if @lines[0].to_s.strip.length > 0
-        @lines.insert(0, ENDL)
-        text.split(/^/).reverse.each do |line|
-          @lines.insert(0, "#{@comment_prefix} #{line}")
+        @lines.unshift "\n" unless @lines.first.strip.empty?
+        @lines.unshift "\n"
+        copyright_header = text.split(/^/).inject([]) do |header,line|
+          header << "#@comment_prefix #{line}"
         end
+        @lines.unshift copyright_header
       end
 
       def save!

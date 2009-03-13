@@ -43,12 +43,11 @@ module MM
       end
 
       def add_copyright(text)
-        @lines.unshift "\n" unless @lines.first.strip.empty?
-        @lines.unshift "\n"
         copyright_header = text.split(/^/).inject([]) do |header,line|
           header << "#@comment_prefix #{line}"
         end
-        @lines.unshift copyright_header
+        @lines.unshift "\n" unless @lines.first.strip.empty?
+        @lines = copyright_header + ["\n"] + @lines
       end
 
       def save!

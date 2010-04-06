@@ -2,15 +2,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mmcopyrights}
-  s.version = "1.0.0"
-
+  s.version = "1.1.0"
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Micah Martin"]
-  s.date = %q{2009-03-10}
+  s.date = Time.now.to_s
   s.description = %q{Add copyright comments to all your source files}
   s.email = %q{micah@8thlight.com}
   s.extra_rdoc_files = ["README.rdoc"]
-  s.files = ["README.rdoc", "VERSION.yml", "lib/mmcopyrights.rb", "spec/mmcopyrights_spec.rb"]
+  s.files = ["README.rdoc", "lib/mmcopyrights.rb", "spec/mmcopyrights_spec.rb"]
   s.has_rdoc = false
   s.homepage = %q{http://github.com/slagyr/mmcopyrights}
   s.rdoc_options = ["--inline-source", "--charset=UTF-8"]

@@ -9,6 +9,8 @@ module MM
     end
     
     self.verbose = true
+    
+    ENDL = $/
 
     class SourceFile
 
@@ -46,8 +48,8 @@ module MM
         copyright_header = text.split(/^/).inject([]) do |header,line|
           header << "#@comment_prefix #{line}"
         end
-        @lines.unshift "\n" unless @lines.first.strip.empty?
-        @lines = copyright_header + ["\n"] + @lines
+        @lines.unshift ENDL unless @lines.first.strip.empty?
+        @lines = copyright_header + [ENDL] + @lines
       end
 
       def save!

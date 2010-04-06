@@ -10,18 +10,9 @@ Spec::Rake::SpecTask.new('spec') do |t|
   t.rcov = false
 end
 
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |s|
-    s.name = "mmcopyrights"
-    s.summary = "MM Copyrights"
-    s.email = "micah@8thlight.com"
-    s.homepage = "http://github.com/slagyr/mmcopyrights"
-    s.description = "Add copyright comments to all your source files"
-    s.authors = ["Micah Martin"]
-  end
-rescue LoadError
-  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
+Rake::GemPackageTask.new(eval(IO.read('mmcopyrights.gemspec'))) do |pkg|
+  pkg.need_zip = true
+  pkg.need_tar = true
 end
 
 task :copyrights do

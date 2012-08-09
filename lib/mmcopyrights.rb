@@ -48,7 +48,7 @@ module MM
         copyright_header = text.split(/^/).inject([]) do |header,line|
           header << "#@comment_prefix #{line}"
         end
-        @lines.unshift ENDL unless @lines.first.strip.empty?
+        @lines.unshift ENDL unless @lines.first.nil? || @lines.first.strip.empty?
         @lines = copyright_header + [ENDL] + @lines
       end
 

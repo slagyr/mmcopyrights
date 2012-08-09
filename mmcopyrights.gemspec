@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version = "1.1.0"
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Micah Martin"]
-  s.date = Time.now.to_s
+  s.date = Date.today.to_s
   s.description = %q{Add copyright comments to all your source files}
   s.email = %q{micah@8thlight.com}
   s.extra_rdoc_files = ["README.rdoc"]

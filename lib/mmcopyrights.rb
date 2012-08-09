@@ -1,15 +1,15 @@
-#- Copyright © 2009 Micah Martin.
+#- Copyright Â© 2009 Micah Martin.
 #- MM Copyrights and all included source files are distributed under terms of the GNU LGPL.
 
 module MM
   module Copyrights
-    
+
     class <<self
       attr_accessor :verbose
     end
-    
+
     self.verbose = true
-    
+
     ENDL = $/
 
     class SourceFile
@@ -48,15 +48,15 @@ module MM
         copyright_header = text.split(/^/).inject([]) do |header,line|
           header << "#@comment_prefix #{line}"
         end
-        @lines.unshift ENDL unless @lines.first.strip.empty?
+        @lines.unshift ENDL unless @lines.first.nil? || @lines.first.strip.empty?
         @lines = copyright_header + [ENDL] + @lines
       end
 
       def save!
-        File.open(@filename, "w"){ |f| f.print @lines }
+        File.open(@filename, "w"){ |f| f.print @lines.join() }
       end
     end
-    
+
     def self.process(dir, ext, prefix, copyright)
       Dir.glob(File.join(dir, "**", "*.#{ext}")).each do |filename|
         source_file = SourceFile.new(filename, prefix)
@@ -72,13 +72,13 @@ module MM
         else
           say "missing copyright: #{filename}"
           source_file.add_copyright(copyright)
-          source_file.save!
+         	source_file.save!
         end
       end
     end
 
     private
-    
+
     def self.say(thing)
       puts thing if @verbose
     end

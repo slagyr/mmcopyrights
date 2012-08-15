@@ -1,5 +1,5 @@
-#- Copyright © 2009 Micah Martin.
-#- MM Copyrights and all included source files are distributed under terms of the GNU LGPL.
+#- Copyright (C) 2012 Micah Martin.
+#- MM Copyrights and all included source files are distributed under terms of the MIT License.
 
 require 'rubygems'
 require 'rspec'

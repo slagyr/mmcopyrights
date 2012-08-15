@@ -2,7 +2,7 @@
 #- MM Copyrights and all included source files are distributed under terms of the GNU LGPL.
 
 require 'rubygems'
-require 'spec'
+require 'rspec'
 require File.expand_path(File.dirname(__FILE__) + "/../lib/mmcopyrights")
 require 'fileutils'
 
